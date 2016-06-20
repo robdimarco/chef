@@ -1,40 +1,45 @@
 .autotest
 coverage
-doc
 .DS_Store
-packages/chef-server/db
-examples/search_index
-examples/store
-examples/openid-cstore
-examples/openid-db
-chef/pkg
-chef-server/pkg
-chef-server-webui/pkg
-chef-server-api/pkg
-chef-expander/pkg
-chef/log
-chef/rdoc
-chef-server/log
-log
-couchdb.stderr
-couchdb.stdout
-features/data/tmp/**
-*.swp
-*.swo
-features/data/cookbooks/**/metadata.json
-features/data/solr/**
-erl_crash.dump
-*.rake_tasks~
-.idea
-features/data/repo/checksums/
-*.rbc
-.rvmrc
-.bundle
-chef-expander/conf/chef-expander.rb
-chef-expander/spec/fixtures/expander.log
-features/data/cookbooks/transfer_remote_files/metadata.json
-features/data/cookbooks/synchronize_deps/metadata.json
-features/data/cookbooks_not_uploaded_at_feature_start/*/metadata.json
-Gemfile.lock
+pkg/*
+tags
 */tags
 *~
+.chef
+
+# You should check in your Gemfile.lock in applications, and not in gems
+external_tests/*.lock
+/Gemfile.local
+
+# ignore some common Bundler 'binstubs' directory names
+# http://gembundler.com/man/bundle-exec.1.html
+b/
+binstubs/
+**/.bundle
+# RVM and RBENV ruby version files
+.rbenv-version
+.rvmrc
+.ruby-version
+.ruby-gemset
+
+# IDE files
+.project
+
+# Documentation
+_site/*
+.yardoc/
+doc/
+
+# Test Kitchen
+.kitchen/
+
+# Vagrant
+Vagrantfile
+.vagrant/
+
+# Kitchen Tests Local Mode Data
+kitchen-tests/nodes/*
+
+# Temporary files present during spec runs
+spec/data/test-dir
+/config/
